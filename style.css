@@ -1,0 +1,217 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li {
+  margin: 0; /* Remove a margem padrão */
+  padding: 0; /* Remove o preenchimento padrão */
+  box-sizing: border-box; /* Inclui o preenchimento e a borda nas dimensões do elemento */
+}
+
+body {
+  font-family: 'Arial', sans-serif; /* Define a fonte do corpo */
+  line-height: 1.6; /* Define a altura da linha para melhor legibilidade */
+  color: #333; /* Define a cor do texto */
+  background-color: grey; /* Define a cor de fundo do corpo */
+  display: flex; /* Usa flexbox para layout */
+  flex-direction: column; /* Organiza os filhos em coluna */
+  min-height: 100vh; /* Garante que o corpo tenha pelo menos a altura da tela */
+}
+
+header {
+  background-color: #282c34; /* Define a cor de fundo do cabeçalho */
+  color: #fff; /* Define a cor do texto no cabeçalho */
+  padding: 20px; /* Adiciona espaço interno */
+  text-align: center; /* Centraliza o texto */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao cabeçalho */
+}
+
+header h1 {
+  margin: 0; /* Remove a margem do título */
+  font-size: 2.5rem; /* Define o tamanho da fonte do título */
+}
+
+nav ul {
+  list-style: none; /* Remove as bolinhas das listas */
+  padding: 0; /* Remove o preenchimento da lista */
+}
+
+nav ul li {
+  display: inline; /* Exibe os itens da lista em linha */
+  margin: 0 15px; /* Adiciona margem lateral entre os itens */
+}
+
+nav ul li a {
+  color: #556dd8; /* Define a cor dos links */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  font-weight: bold; /* Define o peso da fonte como negrito */
+}
+
+/* Mudança de cor ao passar o mouse */
+nav ul li a:hover {
+  color: #61dafb; /* Altera a cor ao passar o mouse */
+  text-decoration: underline; /* Sublinha o link ao passar o mouse */
+}
+
+/* Mudança de cor ao clicar */
+nav ul li a:active {
+  color: #ff5733; /* Altera a cor ao clicar */
+}
+
+/* Adicionando o estilo para links de email */
+a[href^="mailto:"] {
+  color: #556dd8; /* Define a cor dos links de email */
+}
+
+a[href^="mailto:"]:hover {
+  color: #61dafb; /* Altera a cor ao passar o mouse nos links de email */
+  text-decoration: underline; /* Sublinha o link ao passar o mouse */
+}
+
+a[href^="mailto:"]:active {
+  color: #ff5733; /* Altera a cor ao clicar nos links de email */
+}
+
+main {
+  flex: 1; /* Permite que o elemento principal ocupe o espaço restante */
+  padding: 20px; /* Adiciona espaço interno ao elemento principal */
+  max-width: 1200px; /* Define a largura máxima do elemento principal */
+  margin: 0 auto; /* Centraliza o elemento principal horizontalmente */
+}
+
+.section {
+  background: #fff; /* Define a cor de fundo da seção */
+  border-radius: 8px; /* Arredonda os cantos da seção */
+  padding: 20px; /* Adiciona espaço interno à seção */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra à seção */
+  margin-bottom: 20px; /* Adiciona espaço inferior entre as seções */
+  animation: fadeInUp 1s ease-out; /* Aplica uma animação de entrada */
+}
+
+.section h2 {
+  color: #282c34; /* Define a cor do título da seção */
+  border-bottom: 2px solid #61dafb; /* Adiciona uma borda inferior ao título */
+  padding-bottom: 10px; /* Adiciona espaço inferior ao título */
+  margin-bottom: 20px; /* Adiciona espaço inferior ao título */
+  font-size: 1.8rem; /* Define o tamanho da fonte do título da seção */
+}
+
+.section p {
+  margin-bottom: 20px; /* Adiciona espaço inferior aos parágrafos */
+}
+
+ul {
+  list-style-type: disc; /* Define o estilo das listas como marcadores */
+  margin-left: 20px; /* Adiciona margem à esquerda da lista */
+}
+
+.section-divider {
+  border: 0; /* Remove a borda */
+  height: 1px; /* Define a altura da divisória */
+  background: #ddd; /* Define a cor de fundo da divisória */
+  margin: 20px 0; /* Adiciona margem superior e inferior à divisória */
+}
+
+footer {
+  background-color: #282c34; /* Define a cor de fundo do rodapé */
+  color: #fff; /* Define a cor do texto no rodapé */
+  padding: 10px; /* Adiciona espaço interno ao rodapé */
+  text-align: center; /* Centraliza o texto no rodapé */
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao rodapé */
+}
+
+/* Keyframes for animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0; /* Começa invisível */
+    transform: translateY(20px); /* Move para baixo 20px */
+  }
+  to {
+    opacity: 1; /* Fica totalmente visível */
+    transform: translateY(0); /* Retorna à posição original */
+  }
+}
+
+/* Estilo da moldura do post do Instagram */
+.instagram-post-wrapper {
+  display: flex; /* Usa flexbox para layout */
+  align-items: flex-start; /* Alinha os itens ao topo */
+  margin-bottom: 20px; /* Adiciona espaço inferior entre os posts */
+  flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+}
+
+.instagram-post {
+  width: 100%; /* Define a largura do post como 100% do contêiner */
+  max-width: 300px; /* Define a largura máxima do post */
+  height: 300px; /* Define a altura do post */
+  border-radius: 15px; /* Arredonda os cantos do post */
+  border: 5px solid #61dafb; /* Adiciona uma borda ao post */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao post */
+  overflow: hidden; /* Oculta qualquer conteúdo que exceda o contêiner */
+  background-color: #fff; /* Define a cor de fundo do post */
+  margin-right: 10px; /* Adiciona margem à direita do post */
+  margin-bottom: 10px; /* Adiciona margem inferior ao post */
+}
+
+.instagram-post img {
+  width: 100%; /* Faz a imagem ocupar 100% da largura do post */
+  height: 100%; /* Faz a imagem ocupar 100% da altura do post */
+  object-fit: cover; /* Mantém a proporção da imagem e cobre o contêiner */
+}
+
+.instagram-comment {
+  max-width: 100%; /* Define a largura máxima do comentário como 100% */
+  margin-left: 10px; /* Adiciona margem à esquerda do comentário */
+}
+
+/* Media queries para responsividade */
+@media (max-width: 1024px) {
+  header h1 {
+    font-size: 2.5rem; /* Ajusta o tamanho do título em telas menores */
+  }
+
+  nav ul li {
+    display: inline-block; /* Muda para inline-block para melhor responsividade */
+    margin: 0 10px; /* Ajusta a margem lateral entre os itens */
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem; /* Ajusta o tamanho do título em telas menores */
+  }
+
+  nav ul li {
+    display: block; /* Exibe os itens da lista em bloco em telas pequenas */
+    margin: 10px 0; /* Adiciona margem vertical entre os itens */
+  }
+
+  main {
+    padding: 10px; /* Reduz o preenchimento do elemento principal */
+  }
+
+  .section {
+    padding: 15px; /* Reduz o preenchimento da seção */
+  }
+
+  .instagram-post-wrapper {
+    flex-direction: column; /* Alinha postagens verticalmente em telas pequenas */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .instagram-post {
+    width: 100%; /* Faz o post ocupar toda a largura do contêiner */
+    max-width: none; /* Remove a largura máxima */
+    height: 300px; /* Garante que a altura permaneça constante */
+    margin-right: 0; /* Remove a margem à direita */
+  }
+
+  .instagram-comment {
+    max-width: 100%; /* Garante que o comentário ocupe toda a largura */
+    margin-left: 0; /* Remove a margem à esquerda */
+  }
+}
